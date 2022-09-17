@@ -1,0 +1,13 @@
+﻿@page
+@using BlazorAppTest.Client.Pages
+@model BlazorAppTest.Server.Pages.MyPageModel
+@{
+    ViewData["Title"] = "Test";
+    Layout = "~/Pages/_Layout.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div>MyPage.cshtml string.</div>
+<hr />
+
+<component type="typeof(MyComponent)" render-mode="WebAssemblyPrerendered" param-MyObject="Model.MyObject" />

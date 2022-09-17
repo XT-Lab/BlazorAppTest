@@ -1,0 +1,18 @@
+﻿@using BlazorAppTest.Shared.Models
+
+<div>MyComponent.razor string.</div>
+<div>Id:@(MyObject?.Id)</div>
+<div>Name:@(MyObject?.Name)</div>
+
+<div><input type="button" @onclick="ChangeStr" value="Button" /></div>
+
+@code {
+    [Parameter]
+    public MyClass? MyObject { get; set; }
+
+    private void ChangeStr()
+    {
+        MyObject.Id = 2;
+        MyObject.Name = "ChangeStr";
+    }
+}
